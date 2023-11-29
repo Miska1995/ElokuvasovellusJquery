@@ -323,7 +323,7 @@ h1 {
 /* Responsiiviset tyylit pienille näytöille Bootstrapin avulla */
 @media screen and (max-width: 600px) {
     .container {
-        max-width: 100%;
+        max-width: 70%;
         margin: 10px auto;
         padding: 10px;
     }
