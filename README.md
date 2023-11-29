@@ -2,7 +2,7 @@
 Projekti 2b: jQuery-sovellus
 
 Julkaistu Netlify:ssä: https://elokuvasovellus-jquery.netlify.app/
-
+Nopea esitys video:
 ---
 
 Tämä on "jatkoa" 2a-projektista. Eli tässä on kaikki DOM-skriptaus sekä AJAX toiminnot on toteutettu jQueryn avulla. Muutama SlideDown efekti lisätty.
