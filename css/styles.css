@@ -347,6 +347,24 @@ h1 {
     .movie p, .movie details p {
         font-size: 0.6rem;
     }
+
+    /* Responsiiviset tyylit live-kellolle */
+    #live-clock {
+        font-size: 0.8rem;
+        margin-bottom: 10px;
+    }
+
+    /* Responsiiviset tyylit musiikkinapille */
+    #music-toggle-button {
+        font-size: 0.6rem;
+        padding: 5px 10px;
+    }
+
+    /* Responsiiviset tyylit taustakuvan vaihtopainikkeelle */
+    .btn-primary {
+        font-size: 0.6rem;
+        padding: 5px 10px;
+    }
 }
 
 /* Päälaatikon sparkle-efekti */
