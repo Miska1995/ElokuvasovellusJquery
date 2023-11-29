@@ -324,15 +324,15 @@ h1 {
 @media screen and (max-width: 600px) {
     .container {
         max-width: 70%;
-        margin: 10px auto;
+        margin: 20px auto;
         padding: 10px;
     }
     h1 {
         font-size: 1rem;
     }
     .btn, .form-control {
-        font-size: 0.6rem;
-        padding: 8px 15px;
+        font-size: 0.5rem;
+        padding: 4px 8px;
     }
     .movie {
         padding: 10px;
@@ -350,22 +350,23 @@ h1 {
 
     /* Responsiiviset tyylit live-kellolle */
     #live-clock {
-        font-size: 0.8rem;
+        font-size: 0.7rem;
         margin-bottom: 10px;
     }
 
     /* Responsiiviset tyylit musiikkinapille */
     #music-toggle-button {
-        font-size: 0.6rem;
-        padding: 5px 10px;
+        font-size: 0.5rem;
+        padding: 4px 8px;
     }
 
     /* Responsiiviset tyylit taustakuvan vaihtopainikkeelle */
     .btn-primary {
-        font-size: 0.6rem;
-        padding: 5px 10px;
+        font-size: 0.5rem;
+        padding: 4px 8px;
     }
 }
+
 
 /* Päälaatikon sparkle-efekti */
 @keyframes sparkle {
