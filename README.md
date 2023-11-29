@@ -26,3 +26,8 @@ Suunnilleen samat virheet tässäkin sovelluksessa kuin 2a:ssa, eli joidenkin el
 CSS-tiedostossa keltainen "varoitus" joka ei näytä olevan kriittinen.
 
 En ole laittanut KAIKKI komponentteja bootstrapilla, tai muuttanut KAIKKIA javascript funktioita jquery:iksi, mutta kaikki dom scriptaus sekä ajax komennot ovat nyt jquery muodossa.
+---
+Mitä voisi lisätä?
+---
+
+Jos ei backendin puollelle vielä mennä, niin elokuvien tietojen suomennus, sekä elokuvien näytösaikojen jörjestäminen aikaisin -> myöhäisin järjestykseen, näitä en nyt kerennyt vielä laatimaan tähän.
