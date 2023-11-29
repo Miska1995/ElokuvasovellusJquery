@@ -6,7 +6,7 @@ Julkaistu Netlify:ssä: https://elokuvasovellus-jquery.netlify.app/
 ---
 
 Tämä on "jatkoa" 2a-projektista. Eli tässä on kaikki DOM-skriptaus sekä AJAX toiminnot on toteutettu jQueryn avulla. Muutama SlideDown efekti lisätty.
-Bootstrappia käytetty kaikkiin näppäimiin (muunneltu mieluisiksi omasa CSS-tiedostossa)
+Bootstrappia käytetty kaikkiin näppäimiin (muunneltu mieluisiksi omasa CSS-tiedostossa) Halusin kuitenkin säilyttää 2a:n teeman pohjana.
 
 ---
 
