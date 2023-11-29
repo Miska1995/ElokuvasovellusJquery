@@ -14,10 +14,13 @@ Bootstrap noukittu: https://getbootstrap.com/docs/4.3/getting-started/introducti
 
 Jquery noukittu: https://blog.jquery.com/2022/08/26/jquery-3-6-1-maintenance-release/
 
----
+GPT4 käytetty ongelmien etsinnässä, osittain kommentoinnissa, sekä inspiraation hakemisessa.
 
 Muuten HTML/CSS/Javascript ovat samoisa lähteistä kuin 2a:ssa.
 
+---
+Virheet/Ongelmat:
+---
 Suunnilleen samat virheet tässäkin sovelluksessa kuin 2a:ssa, eli joidenkin elokuvien tiedot/kuvat/juoni yms, ei välttämättä näy. (vika Apissa?)
 
 CSS-tiedostossa keltainen "varoitus" joka ei näytä olevan kriittinen.
