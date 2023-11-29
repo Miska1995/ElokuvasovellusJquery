@@ -4,6 +4,7 @@ Projekti 2b: jQuery-sovellus
 Julkaistu Netlify:ssä: https://elokuvasovellus-jquery.netlify.app/
 ---
 Nopea esitys video:
+
 ---
 Yleisesti
 ---
@@ -20,6 +21,7 @@ Jquery noukittu: https://blog.jquery.com/2022/08/26/jquery-3-6-1-maintenance-rel
 GPT4 käytetty ongelmien etsinnässä, osittain kommentoinnissa, sekä inspiraation hakemisessa.
 
 Muuten HTML/CSS/Javascript ovat samoisa lähteistä kuin 2a:ssa.
+
 ---
 Virheet/Ongelmat:
 ---
@@ -28,6 +30,7 @@ Suunnilleen samat virheet tässäkin sovelluksessa kuin 2a:ssa, eli joidenkin el
 CSS-tiedostossa keltainen "varoitus" joka ei näytä olevan kriittinen.
 
 En ole laittanut KAIKKI komponentteja bootstrapilla, tai muuttanut KAIKKIA javascript funktioita jquery:iksi, mutta kaikki dom scriptaus sekä ajax komennot ovat nyt jquery muodossa.
+
 ---
 Mitä voisi lisätä?
 ---
