@@ -1,0 +1,405 @@
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
+
+/* Yleiset asetukset */
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #000000;
+    line-height: 1.6;
+}
+
+/* Otsikon tyyli ja animaatio */
+h1 {
+    text-align: center;
+    color: #FFD700;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.5rem;
+    animation: flicker 1s linear infinite;
+    text-shadow: 3px 3px 0px #c148f5;
+    padding: 5px;
+}
+
+/* Päälaatikon tyyli */
+.container {
+    max-width: 700px;
+    margin: 30px auto;
+    padding: 10px;
+    background: #1e1e1e;
+    box-shadow: 0 12px 24px rgba(74, 216, 244, 0.9);
+    animation: sparkle 1.5s infinite ease-in-out;
+    border-radius: 20px;
+}
+
+/* Live-kelloelementin tyyli */
+#live-clock {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.7rem;
+    color: #FFD700;
+    background-color: #343434;
+    padding: 10px;
+    position: fixed;
+    top: 5px;
+    right: 5px;
+    border: 2px solid #776a21;
+    text-shadow: 3px 3px 0px #c148f5;
+    z-index: 1000;
+}
+
+/* Vaihda taustakuvaa-nappi */
+.btn-primary {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.7rem;
+    color: #FFD700;
+    background-color: #343434;
+    padding: 10px;
+    position: fixed;
+    top: 5px;
+    left: 5px;
+    border: 2px solid #776a21;
+    z-index: 1000;
+    text-shadow: 3px 3px 0px #c148f5;
+}
+
+.btn-primary:hover {
+    background-color: #FFD700;
+    color: #1e1e1e;
+    border-color: #1e1e1e;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.9);
+}
+
+/* Musiikki nappi */
+.btn-secondary {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.7rem;
+    color: #FFD700;
+    background-color: #343434;
+    padding: 10px; /* Pienennetty pysty- ja vaakasuunnassa */
+    position: fixed;
+    top: 5px;
+    left: 235px;
+    border: 2px solid #776a21;
+    z-index: 1000;
+    text-shadow: 3px 3px 0px #c148f5;
+}
+
+.btn-secondary:hover {
+    background-color: #FFD700; /* Keltainen */
+    color: #1e1e1e; /* Tumma harmaa */
+    border-color: #1e1e1e; /* Tumma harmaa reunus */
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.9);
+}
+
+
+/* Teatterivalintavalikko ja hakukenttä */
+#theater-dropdown, #search-input {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.7rem;
+    color: #FFD700;
+    background-color: #343434;
+    border: 2px solid #000000;
+    padding: 10px;
+    margin-bottom: 15px;
+    width: 100%;
+    box-shadow: 0 0 5px rgba(255, 215, 0, 0.8);
+    transition: all 0.3s ease;
+    display: none;
+    opacity: 0;
+}
+
+/* Teatterivalintavalikon ja hakukentän hover-efekti */
+#theater-dropdown:hover, #search-input:hover {
+    background-color: #FFD700;
+    color: #1e1e1e;
+    border: 2px solid #776a21;
+}
+
+/* Kun elementti on aktiivinen, käytetään animaatiota */
+#theater-dropdown.active, #search-input.active {
+    display: block;
+    animation: slideDownAnimation 0.5s forwards;
+}
+
+/* Elokuvakontin tyyli */
+#movies-container {
+    margin-top: 30px;
+    box-shadow: 0 0 5px rgba(255, 215, 0, 0.8);
+}
+
+/* Elokuvalaatikon tyyli */
+.movie {
+    position: relative;
+    border: 2px solid #776a21;
+    margin-bottom: 30px;
+    padding: 15px;
+    background-color: #000000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Elokuvakuvien julisteiden ja tekstien tyyli */
+.movie img {
+    width: 100%;
+    transition: transform 0.3s ease; /* Sujuva siirtymä hover-efektille */
+    height: auto;
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+    object-fit: cover;
+    margin-bottom: 7%;
+    transition: transform 0.3s ease;
+}
+
+.movie:hover {
+    transform: scale(1.004); /* Suurentaa koko .movie-elementtiä hoverin aikana */
+    box-shadow: 0 6px 8px #FFD700;
+}
+
+.movie h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+    color: #FFD700;
+    text-shadow: 0 0 5px #FFD700;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.movie p {
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+    font-family: 'Press Start 2P', cursive;
+    color: #FFFFFF;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
+}
+
+.movie details[open] {
+    display: block;
+    background-color: #000000;
+
+}
+
+/* Juonen tyyli */
+.movie details {
+    max-width: 100%;
+    padding: 1px;
+    color: #FFFFFF;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.7rem;
+    text-shadow: 0 0 10px rgba(242, 236, 236, 0.7);
+    box-shadow: inset 0 0 10px #000000;
+    outline: none;
+}
+
+/* Juonikortin yhteenveto ja tekstin tyyli */
+.movie details summary {
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #343434;
+    color: #fffffd;
+    border: 2px solid #776a21;
+    border-radius: 5px;
+    text-shadow: 0 0 5px rgba(255, 215, 0, 0.7);
+    transition: all 0.3s ease;
+}
+
+.movie details summary:hover {
+    background-color: #FFD700;
+    color: #343434;
+    border-color: #343434;
+}
+
+/* Juonen fontti asetukset */
+.movie details p {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    text-align: justify;
+    background-color: #000000;
+    padding: 15px;
+    margin: 0;
+    font-size: 0.7rem;
+    cursor: pointer;
+    outline: none;
+    max-height: 200px;
+    overflow-y: auto;
+    color: #ddd;
+}
+
+/* Lisää toivelistalle -nappi */
+.add-to-wishlist-button {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.7rem;
+    color: #FFD700;
+    background-color: #343434;
+    border: 2px solid #776a21;
+    padding: 5px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    box-shadow: rgba(255, 215, 0, 0.8);
+    text-shadow: 3px 3px 0px #c148f5;
+    z-index: 1000;
+}
+
+.add-to-wishlist-button:focus {
+    outline: none;
+}
+
+/* Hover-efekti toivelistan painikkeelle */
+.add-to-wishlist-button:hover {
+    background-color: #FFD700;
+    color: #343434;
+    border-color: #343434;
+    box-shadow: 0px 0px 8px rgba(255, 215, 0, 1);
+}
+
+/* Tyylit, kun .added-to-wishlist-luokka lisätään */
+.add-to-wishlist-button.added-to-wishlist {
+    background-color: #39FF14;
+    color: #000000;
+    border-color: #000000;
+}
+
+/* Sovelluksen kuva päälaatikossa */
+#app-logo {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 30px;
+    padding-bottom: 3%;
+}
+
+/* Äänenvoimakkuuden säätimen konteineri */
+.volume-container {
+    background-color: #343434;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    max-width: 230px;
+    margin: 0 auto;
+    position: fixed;
+    top: 55px;
+    left: 240px;
+    z-index: 1000;
+    border: 2px solid #776a21;
+    box-shadow: rgba(255, 215, 0, 0.8);
+}
+
+/* Äänenvoimakkuuden slider */
+#volume-slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 15px;
+    background-color: #FFD700;
+    outline: none;
+}
+
+/* Sliderin thumb (vedettävä osa) */
+#volume-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background-color: #343434;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(255, 215, 0, 0.8);
+}
+
+/* Sama kuin yllä, mutta mozilla pohjaisissa selaimissa */
+#volume-slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background-color: #343434;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(255, 215, 0, 0.8);
+}
+
+
+/* Responsiiviset tyylit pienille näytöille Bootstrapin avulla */
+@media screen and (max-width: 600px) {
+    .container {
+        max-width: 100%;
+        margin: 10px auto;
+        padding: 10px;
+    }
+    h1 {
+        font-size: 2.5rem;
+    }
+    .btn, .form-control {
+        font-size: 0.6rem;
+        padding: 8px 15px;
+    }
+    .movie {
+        padding: 10px;
+        margin-bottom: 20px;
+    }
+    .movie img {
+        margin-bottom: 10px;
+    }
+    .movie h3 {
+        font-size: 1rem;
+    }
+    .movie p, .movie details p {
+        font-size: 0.6rem;
+    }
+}
+
+/* Päälaatikon sparkle-efekti */
+@keyframes sparkle {
+    0% {
+        box-shadow: 0 12px 24px rgba(74, 216, 244, 0.9);
+    }
+    50% {
+        box-shadow: 0 12px 30px rgba(74, 216, 244, 1), 0 0 12px rgba(74, 216, 244, 0.7);
+    }
+    100% {
+        box-shadow: 0 12px 24px rgba(74, 216, 244, 0.9);
+    }
+}
+
+/* Otsikko tekstin animaatioita */
+@keyframes flicker {
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+        text-shadow: 3px 3px 0px #c148f5;
+        opacity: 1;
+    }
+    20%, 24%, 55% {
+        text-shadow: none;
+        opacity: 0;
+    }
+}
+
+/* Drop-down menun slide-down efekti */
+@keyframes slideDownAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Avatun juoni-laatikon animaatio ja väri */
+@keyframes yellowPulse {
+    0%, 100% { box-shadow: 0 6px 12px #FFD700; }
+    50% { box-shadow: 0 12px 24px #FFD700; }
+}
+
+/* Avatun Juoni-laatikon Slidedown-animaatio */
+@keyframes slideDownDetails {
+    0% {
+        opacity: 0,5;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miskan Elokuvasovellus</title>
+    <link rel="icon" type="image/x-icon" href="images/Otsikko2.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> <!-- Bootstrap-->
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!--JQuery-->
+    <script src="js/script.js" defer></script>
+    </head>
+    <body style="background-image: url('images/grungetausta2.jpg');">
+    
+    <!-- Vaihda taustakuvaa-nappi -->
+    <button class="btn btn-primary" onclick="vaihdaTaustakuva()">Vaihda Taustakuvaa</button>
+
+    <!--Musiikki nappi-->
+    <button class="btn btn-secondary" id="music-toggle-button" onclick="toggleMusic()">Musiikki On/Off</button>
+
+    <!-- Äänenvoimakkuuden säätimen konteineri -->
+    <div id="volume-slider-container" class="volume-container">
+    <input type="range" id="volume-slider" /> <!-- Tapahtumankäsittelijä määritellään JavaScript-tiedostossa -->
+    </div>
+
+    <!-- Musiikkitiedosto -->
+    <audio id="background-music" loop>
+        <source src="music/synthwave2.mp3" type="audio/mpeg">
+    </audio>
+
+    <!--Live kello-->
+    <div id="live-clock" class="alert alert-info" role="alert"></div>
+
+    <!-- Pääsisältö -->
+    <div class="container">
+
+        <!-- Sovelluksen otsikko -->
+        <h1>Miskan Elokuvasovellus</h1>
+
+        <!-- Sovelluksen logo -->
+        <img src="images/tausta5.png" alt="Miskan Elokuvatieto Sovellus" id="app-logo">
+
+        <!-- Teatterin valintavalikko Bootstrap-tyylillä -->
+        <div class="form-group">
+            <select id="theater-dropdown" class="form-control">
+                <option value="">Valitse Teatteri</option>
+                <!-- Teatterivaihtoehdot lisätään tähän JavaScriptillä -->
+            </select>
+        </div>
+
+        <!-- Elokuvien hakukenttä -->
+        <input type="text" id="search-input" placeholder="Etsi Elokuvia...">
+
+        <!-- Elokuvatiedot näytetään tässä kontissa -->
+        <div id="movies-container">
+            <!-- Elokuvatiedot lisätään tähän JavaScriptillä -->
+        </div>
+    </div>
+</body>
+</html>
