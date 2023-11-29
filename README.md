@@ -4,6 +4,7 @@ Projekti 2b: jQuery-sovellus
 Julkaistu Netlify:ssä: https://elokuvasovellus-jquery.netlify.app/
 ---
 Nopea esitys video:
+---
 
 ---
 Yleisesti
