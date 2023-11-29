@@ -153,7 +153,7 @@ function displayMovieInfo(movieInfo, container, showTime) {
         <button class='add-to-wishlist-button' data-added='false'>Lisää toivelistaan</button>
     `);
 
-    // SlideDown animaatio
+    // SlideDown animaatio juonelle
     movieElement.find('details').on('toggle', function() {
         if (this.open) {
             $(this).hide().slideDown(1000);
@@ -190,7 +190,7 @@ function filterMovies() {
     });
 }
 
-// Alusta teatterivalikko ja kuuntelijat jQueryn avulla
+// Alustaa teatterivalikon ja kuuntelijat jQueryn avulla
 $(function() {
     populateTheaters();
     $('#theater-dropdown').on('change', function() {
@@ -202,7 +202,7 @@ $(function() {
     $('#search-input').on('input', filterMovies);
 });
 
-// Funktio musiikin toiston hallintaan
+// Funktio musiikin toiston hallintaan (tarkotuksella "kokeiltu" var:ia const:in sijasta)
 function toggleMusic() {
     var music = $("#background-music")[0];
     var musicButton = $("#music-toggle-button");
