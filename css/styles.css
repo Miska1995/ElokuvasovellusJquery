@@ -99,7 +99,7 @@ h1 {
 /* Teatterivalintavalikko ja hakukenttä */
 #theater-dropdown, #search-input {
     font-family: 'Press Start 2P', cursive;
-    font-size: 0.8rem;
+    font-size: 0,8rem;
     color: #FFD700;
     background-color: #343434;
     border: 2px solid #000000;
