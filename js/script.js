@@ -202,11 +202,11 @@ $(function() {
     $('#search-input').on('input', filterMovies);
 });
 
-// Funktio musiikin toiston hallintaan (tarkotuksella "kokeiltu" var:ia const:in sijasta)
+// Funktio musiikin toiston hallintaan
 function toggleMusic() {
-    var music = $("#background-music")[0];
-    var musicButton = $("#music-toggle-button");
-    var volumeSliderContainer = $("#volume-slider-container");
+    const music = $("#background-music")[0];
+    const musicButton = $("#music-toggle-button");
+    const volumeSliderContainer = $("#volume-slider-container");
 
     if (music.paused) {
         music.play();
