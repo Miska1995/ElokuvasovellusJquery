@@ -79,7 +79,7 @@ h1 {
     font-size: 0.7rem;
     color: #FFD700;
     background-color: #343434;
-    padding: 10px; /* Pienennetty pysty- ja vaakasuunnassa */
+    padding: 10px;
     position: fixed;
     top: 5px;
     left: 235px;
@@ -89,9 +89,9 @@ h1 {
 }
 
 .btn-secondary:hover {
-    background-color: #FFD700; /* Keltainen */
-    color: #1e1e1e; /* Tumma harmaa */
-    border-color: #1e1e1e; /* Tumma harmaa reunus */
+    background-color: #FFD700;
+    color: #1e1e1e;
+    border-color: #1e1e1e;
     box-shadow: 0 0 15px rgba(255, 215, 0, 0.9);
 }
 
